@@ -1,0 +1,15 @@
+<% @page_title = "Update Shift" %>
+
+<div class="shifts edit">
+  <h2>Update Shift</h2>
+
+  <%= form_for(@shift) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Shift") %>
+    </div>
+
+  <% end %>
+</div>

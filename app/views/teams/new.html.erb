@@ -1,0 +1,14 @@
+
+<div class="team new">
+  <h2>Create Team</h2>
+
+  <%= form_for(@team) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Team") %>
+    </div>
+
+  <% end %>
+</div>

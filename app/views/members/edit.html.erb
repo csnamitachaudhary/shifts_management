@@ -1,0 +1,15 @@
+<% @page_title = "Update Member" %>
+
+<div class="members edit">
+  <h2>Update Member</h2>
+
+  <%= form_for(@member) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Member") %>
+    </div>
+
+  <% end %>
+</div>

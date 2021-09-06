@@ -1,0 +1,28 @@
+<% @page_title = "All Teams" %>
+
+<div class="teams index">
+  <h2>Teams</h2>
+
+  <%= image_tag('plus_sign.png', :size => '11x11', :alt => '+') %>
+  <%= link_to("Add New Team", new_team_path, :class => 'action new') %>
+
+  <table class="listing" summary="Team list">
+    <tr class="header">
+      <th>#</th>
+      <th>Team Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @teams.each do |team| %>
+    <tr>
+      <td><%= team.id %></td>
+      <td><%= team.name %></td>
+      <td class="actions">
+        <%= link_to("Members", members_path(:team_id => team.id), :class => 'action show') %>
+        <%= link_to("Show", team_path(team), :class => 'action show') %>
+        <%= link_to("Edit", edit_team_path(team), :class => 'action edit') %>
+        <%= link_to('Delete', delete_team_path(team), :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

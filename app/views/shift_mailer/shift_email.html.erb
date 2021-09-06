@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+    Shift details<br>
+    --------------------------
+    </p>
+    <p>Team Name: <%= @team.name %></p>
+    <% @team.members.each do |member| %>
+        <p>Member Name: <%= member.first_name %></p>
+        <% todays_shift = member.shifts.find{|shift| shift.read_attribute_before_type_cast(:day)==Date.today.wday;}%>
+        <p>Shift Start Time For Today: <%= todays_shift.start_time.strftime("%H:%M") %></p>
+        <p>Shift End Time For Today: <%= todays_shift.end_time.strftime("%H:%M") %></p>
+    <% end %>
+    <p>
+  </body>
+</html>

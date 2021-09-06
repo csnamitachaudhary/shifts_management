@@ -1,0 +1,29 @@
+<% @page_title = "Show Team" %>
+
+<div class="teams show">
+  <h2>Show Team</h2>
+
+  <table summary="Team detail view">
+    <tr>
+      <th>Name</th>
+      <td><%= @team.name %></td>
+    </tr>
+    <tr>
+      <th>Department</th>
+      <td><%= @team.department.humanize %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @team.description %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @team.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @team.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

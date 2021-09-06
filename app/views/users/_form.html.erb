@@ -1,0 +1,27 @@
+<%= error_messages_for(f.object) %>
+  <table summary="User form fields" >
+  <tr>
+    <th>First Name</th>
+    <td><%= f.text_field(:first_name) %></td>
+  </tr>
+    <tr>
+    <th>Last Name</th>
+    <td><%= f.text_field(:last_name) %></td>
+  </tr>
+  <tr>
+    <th>Email </th>
+    <td><%= f.text_field(:email) %></td>
+  </tr>
+  <tr>
+    <th>Password</th>
+    <td><%=f.password_field(:password) %></td>
+  </tr>
+  <tr>
+    <th>Mobile</th>
+    <td><%= f.text_field(:mobile) %></td>
+  </tr>
+ <tr>
+    <th>Date Of Birth</th>
+    <td><%= f.date_field :date_of_birth, as: :date, value: f.object.try(:strftime,"%m/%d/%Y") %></td>
+  </tr> 
+</table>

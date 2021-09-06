@@ -1,0 +1,9 @@
+    Shift details
+    --------------------------
+    Team Name: <%= @team.name %>
+    <% @team.members.each do |member| %>
+        Member Name: <%= member.first_name %>
+        <% todays_shift = member.shifts.find{|shift| shift.read_attribute_before_type_cast(:day)==Date.today.wday;} %>
+        Shift Start Time For Today: <%= todays_shift.start_time.strftime("%H:%M") %></p>
+        Shift End Time For Today: <%= todays_shift.end_time.strftime("%H:%M") %></p>
+    <% end %>

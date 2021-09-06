@@ -1,0 +1,14 @@
+
+<div class="member new">
+  <h2>Create Member</h2>
+
+  <%= form_for(@member) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Member") %>
+    </div>
+
+  <% end %>
+</div>

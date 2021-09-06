@@ -1,0 +1,17 @@
+<% @page_title = "Delete Member" %>
+
+<div class="members delete">
+  <h2>Delete Member</h2>
+
+  <%= form_for(@member, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this Member?</p>
+
+    <p class="reference-name"><%= f.object.first_name%></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Member") %>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,17 @@
+<% @page_title = "Delete Shift" %>
+
+<div class="shifts delete">
+  <h2>Delete Shift</h2>
+
+  <%= form_for(@shift, :method => 'delete') do |f| %>
+
+    <p>Are you sure you want to permanently delete this shift?</p>
+
+    <p class="reference-name"><%= f.object.day.humanize%></p>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Shift") %>
+    </div>
+
+  <% end %>
+</div>

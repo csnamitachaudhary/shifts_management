@@ -1,0 +1,15 @@
+<%= error_messages_for(f.object) %>
+  <table summary="Team form fields" >
+  <tr>
+    <th>Team Name</th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th>Department</th>
+    <td><%= f.select :department, Team.departments.keys.map { |w| [w.humanize, w] } %></td>
+  </tr>
+    <tr>
+    <th>Description</th>
+    <td><%= f.text_field(:description) %></td>
+  </tr>
+</table>

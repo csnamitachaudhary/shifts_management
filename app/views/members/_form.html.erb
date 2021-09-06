@@ -1,0 +1,18 @@
+<%= error_messages_for(f.object) %>
+  <table summary="Member  form fields" >
+  <tr>
+    <th>Member for team</th>
+    <td><%= @team.name %></td>
+  </tr>
+  <tr>
+    <th>First Name</th>
+    <td><%= f.text_field(:first_name) %></td>
+  </tr>
+    <tr>
+    <th>Last Name</th>
+    <td><%= f.text_field(:last_name) %></td>
+  </tr>
+  <tr>
+    <td> <%= f.hidden_field :team_id, value: @team.id %></td>
+  </tr>
+</table>

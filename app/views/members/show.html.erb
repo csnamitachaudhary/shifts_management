@@ -1,0 +1,25 @@
+<% @page_title = "Show Member" %>
+
+<div class="members show">
+  <h2>Member Details</h2>
+
+  <table summary="Member detail view">
+    <tr>
+      <th>First Name</th>
+      <td><%= @member.first_name %></td>
+    </tr>
+    <tr>
+      <th>Last Name</th>
+      <td><%= @member.last_name %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @member.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @member.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

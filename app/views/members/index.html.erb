@@ -1,0 +1,30 @@
+<% @page_title = "All Members For this team" %>
+
+<div class="members index">
+  <h2>Members</h2>
+
+  <%= image_tag('plus_sign.png', :size => '11x11', :alt => '+') %>
+  <%= link_to("Add New member", new_member_path(:team_id => @team.id), :class => 'action new') %>
+
+  <table class="listing" summary="Team list">
+    <tr class="header">
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Actions</th>
+    </tr>
+    <% @members.each do |member| %>
+    <tr>
+      <td><%= member.id %></td>
+      <td><%= member.first_name %></td>
+      <td><%= member.last_name %></td>
+      <td class="actions">
+        <%= link_to("Shifts", shifts_path(:member_id => member.id), :class => 'action show') %>
+        <%= link_to("Show",member_path(member), :class => 'action show') %>
+        <%= link_to("Edit", edit_member_path(member), :class => 'action edit') %>
+        <%= link_to('Delete', delete_member_path(member), :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

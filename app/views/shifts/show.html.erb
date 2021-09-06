@@ -1,0 +1,29 @@
+<% @page_title = "Show Shift" %>
+
+<div class="shifts show">
+  <h2>Shift Details</h2>
+
+  <table summary="Shift detail view">
+    <tr>
+      <th>Day</th>
+      <td><%= @shift.day.humanize %></td>
+    </tr>
+    <tr>
+      <th>Start Time</th>
+      <td><%= @shift.start_time.strftime("%H:%M") %></td>
+    </tr>
+    <tr>
+      <th>End Time</th>
+      <td><%= @shift.end_time.strftime("%H:%M") %></td>
+    </tr>
+    <tr>
+      <th>Created At</th>
+      <td><%= @shift.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated At</th>
+      <td><%= @shift.updated_at %></td>
+    </tr>
+  </table>
+
+</div>
